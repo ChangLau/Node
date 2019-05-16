@@ -3,6 +3,7 @@ var router = express.Router();
 
 // middleware that is specific to this router
 router.use(function timeLog(req, res, next) {
+  console.log("-----");
   console.log("Time: ", Date.now());
   next();
 });
@@ -29,6 +30,10 @@ router.all("/secret", function(req, res, next) {
 
 router.get("/secret", function(req, res) {
   res.send("get secret");
+});
+
+router.get("/secret/a", function(req, res) {
+  res.send("get secret a");
 });
 
 // random.text
