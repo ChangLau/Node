@@ -11,6 +11,9 @@ var routeRouter = require("./routes/route");
 var middleWareRouter = require("./routes/middleWare");
 var httpRouter = require("./routes/http");
 
+var mongoose = require("./config/mongoose.js");
+var db = mongoose();
+
 var app = express();
 
 // view engine setup
