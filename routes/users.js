@@ -6,9 +6,9 @@ const userModel = require("../models/userModel");
 router.get("/", function(req, res, next) {
   userModel.create(
     [
-      { name: "test1", age: 8 },
-      { name: "test2", age: 18 },
-      { name: "test3", age: 28 }
+      { name: "test1", age: 8, phone: 18991840822 },
+      { name: "test2", age: 18, phone: 18991840823 },
+      { name: "test3", age: 28, phone: 18991840824 }
     ],
     function(error, docs) {
       if (error) {
